@@ -1,0 +1,17 @@
+{
+  "name": "Nextjs-sanity-boilerplate",
+  "version": "1.0.0",
+  "description": "This boilerplate is a monorepo setup containing both a **Next.js** frontend and a **FastAPI** backend, integrated with **Sanity CMS**. The frontend uses **TypeScript**, **Redux** for state management, **Tailwind CSS** (with light and dark mode), and **Next.js App Router** for routing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "workspaces":[
+    "frontend",
+    "backend",
+    "studio"
+  ],
+  "keywords": [],
+  "author": "Charity May Laurel",
+  "license": "ISC"
+}
