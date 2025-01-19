@@ -3,19 +3,130 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #f5f5f5;
+  --accent: #e87a00;
+  --primary: #005f99;
+  --danger: #e80000;
+  --accent-hover: #e89300;
+  --danger-hover: #f00000;
 }
-
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --logofont: "LogoFont1";
   }
+}
+
+@font-face {
+  font-family: "MainFont";
+  src: url("/fonts/Inter.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "InterMedium";
+  src: url("/fonts/Inter.ttf") format("truetype");
+  font-style: medium;
+}
+@font-face {
+  font-family: "LNFont";
+  src: url("/fonts/Inter.ttf") format("truetype");
+  font-style: normal;
+  font-size: var(--LNFontSize);
+}
+
+@font-face {
+  font-family: "LogoFont1";
+  src: url("/fonts/GreyQo.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LogoFont1";
+  src: url("/fonts/Parisienne.ttf") format("truetype");
+  font-style: normal;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "MainFont";
+}
+
+p {
+  font-family: "MainFont";
+  font-weight: 100;
+}
+
+.logo {
+  font-family: var(--logofont);
+}
+.lastname {
+  font-family: "LNFont";
+  font-size: 96px;
+  color: var(--accent);
+  font-weight: 900;
+}
+.firstname,
+.homeTitle {
+  font-family: "LNFont";
+  font-size: 48px;
+  color: var(--foreground);
+  font-weight: 100;
+}
+
+.home-description-1 {
+  font-size: 20px;
+  @apply w-3/5 tracking-wide;
+}
+
+.home-description-2 {
+  font-size: 18px;
+  @apply tracking-wide;
+}
+.title {
+  font-family: "LNFont";
+  font-size: 24px;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.bg-cs-primary {
+  background-color: var(--background);
+}
+
+.border-cs-primary {
+  border-color: var(--accent);
+  outline: solid;
+}
+
+/* Buttons */
+
+.btn {
+  @apply font-semibold px-4 py-2 transition;
+}
+
+.btn-primary {
+  @apply border-2 border-borderAccent bg-buttonBg hover:bg-borderAccent hover:text-buttonText;
+}
+
+.btn-secondary {
+  @apply bg-buttonBg hover:bg-borderAccent hover:text-buttonText;
+}
+
+/* card component */
+
+.card {
+  border-color: var(--accent) !important;
+  border: 1px;
+  border-style: solid !important;
+}
+
+.card-image {
+}
+
+/* header tag */
+h4 {
+  font-family: "MainFont";
+  font-weight: 400;
 }
